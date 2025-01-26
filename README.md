@@ -1,0 +1,2 @@
+# Ruby: Unintended Immutability
+This example demonstrates a subtle error in Ruby where assigning to a method that returns an instance variable does not modify the object's state. The method is called 'value' in this case. The method `value` only returns the value of `@value` instance variable, it doesn't provide a way to modify it. The assignment `my_object.value = 20` does not change the object's internal state, because you are assigning to the method's return value, not modifying the instance variable directly.
